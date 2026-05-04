@@ -1,0 +1,15 @@
+/* In reveal.js, classes on `##` attach to the slide <section>, not the
+   <h2>. Use {.hidden-title} on a slide heading to hide only the title
+   text while keeping slide content visible. */
+.visually-hidden,
+.reveal section.hidden-title > h2 {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

@@ -1,0 +1,11 @@
+<script>
+  // Workaround for Quarto reveal.js emitting a viewport meta tag that
+  // disables pinch-zoom (`maximum-scale=1.0, user-scalable=no`),
+  // which axe flags as a critical `meta-viewport` violation
+  // (WCAG 2.1 SC 1.4.4 — Resize Text).
+  // No upstream issue filed at the time of writing.
+  (function () {
+    var vp = document.querySelector('meta[name="viewport"]');
+    if (vp) vp.setAttribute('content', 'width=device-width, initial-scale=1.0');
+  })();
+</script>

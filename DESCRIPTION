@@ -1,0 +1,16 @@
+Package: arcadoniaTetanusReport
+Version: 0.1.0
+Type: Project
+Title: Accessible, On-Brand Documents with Quarto — R/Medicine 2026
+Depends: R (>= 4.4)
+Imports:
+    knitr (>= 1.50),
+    rmarkdown (>= 2.30),
+    gt (>= 1.0),
+    dplyr,
+    ggplot2 (>= 4.4.0),
+    readr,
+    tidyr,
+    brand.yml,
+    systemfonts,
+    prismatic

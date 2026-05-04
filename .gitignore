@@ -1,0 +1,15 @@
+*.pdf.md
+*.typst.md
+*.html.md
+*.html
+*_files/
+archive/
+notes.md
+examples/
+site_libs/
+.DS_Store
+.vscode/
+.claude/
+
+/.quarto/
+**/*.quarto_ipynb

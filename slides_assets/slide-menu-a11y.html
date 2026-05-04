@@ -1,0 +1,20 @@
+<script>
+  // Workaround for quarto-cli#14249 — the bundled reveal.js-menu plugin
+  // renders its open button as <a href="#"><i class="fas fa-bars"></i></a>
+  // with no accessible name, triggering an axe link-name violation.
+  // Upstream fix in flight at quarto-cli#14251; remove this once it ships.
+  (function () {
+    function patch() {
+      var link = document.querySelector('.slide-menu-button > a[href="#"]');
+      if (link && !link.hasAttribute('aria-label')) {
+        link.setAttribute('aria-label', 'Toggle menu');
+        return true;
+      }
+      return false;
+    }
+    if (patch()) return;
+    new MutationObserver(function (_, obs) {
+      if (patch()) obs.disconnect();
+    }).observe(document.body, { childList: true, subtree: true });
+  })();
+</script>
