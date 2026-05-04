@@ -1,6 +1,8 @@
 # Building Accessible, On-Brand Documents with Quarto
 
-This repo holds the materials for a demo at [R/Medicine 2026](https://rconsortium.github.io/RMedicine_website/)
+This repo holds the materials for a demo at [R/Medicine 2026](https://rconsortium.github.io/RMedicine_website/).
+
+Slides: <https://cwickham.github.io/accessible-branded-documents/>
 
 ## Description
 
