@@ -1,0 +1,55 @@
+# Arcadonia Health Department brand
+# A fictional public-health agency
+
+meta:
+  name: Arcadonia Health Department
+  link: https://example.org/arcadonia-health
+
+logo:
+  images:
+    seal:
+      path: images/ahd-seal.svg
+      alt: Arcadonia Health Department seal
+    wordmark:
+      path: images/asr-wordmark.svg
+      alt: Arcadonia Health Department Arcadonia Surveillance Reports
+  small: wordmark
+  medium: wordmark
+  large: wordmark
+
+color:
+  palette:
+    forest: "#1f4d2e"
+    forest-dark: "#0f2e1a"
+    forest-light: "#5B9573"
+    cream: "#efe5d8"
+    cream-dark: "#d9c9b3"
+    ink: "#1a1a1a"
+    rust: "#b8511f"
+  background: "#ffffff"
+  foreground: ink
+  primary: "#1f4d2e"
+  
+typography:
+  fonts:
+    - family: Literata
+      source: google
+      weight: [400, 500, 700]
+    - family: Public Sans
+      source: google
+      weight: [400, 700]
+  base:
+    family: Public Sans
+    size: 12pt
+  headings:
+    family: Literata
+    weight: 500
+    color: primary
+  link:
+    color: forest-light
+    decoration: underline
+
+defaults:
+  bootstrap:
+    defaults:
+      callout-color-note: $brand-forest

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 140" role="img" aria-labelledby="pipeline-title pipeline-desc">
+  <title id="pipeline-title">Tetanus surveillance pipeline</title>
+  <desc id="pipeline-desc">A clinician confirms a case, reports it to the Arcadonia Department of Public Health, which compiles cases into the annual surveillance report.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#b8511f"/>
+    </marker>
+  </defs>
+  <g font-family="Public Sans, sans-serif" font-size="14" fill="#1a1a1a">
+    <rect x="10" y="40" width="140" height="60" rx="8" fill="none" stroke="#1f4d2e" stroke-width="2"/>
+    <text x="80" y="76" text-anchor="middle">Clinician</text>
+
+    <rect x="230" y="40" width="140" height="60" rx="8" fill="none" stroke="#1f4d2e" stroke-width="2"/>
+    <text x="300" y="76" text-anchor="middle">Health Dept.</text>
+
+    <rect x="450" y="40" width="140" height="60" rx="8" fill="none" stroke="#1f4d2e" stroke-width="2"/>
+    <text x="520" y="76" text-anchor="middle">Annual Report</text>
+  </g>
+  <g stroke="#b8511f" stroke-width="2.5" fill="none">
+    <line x1="150" y1="70" x2="225" y2="70" marker-end="url(#arrow)"/>
+    <line x1="370" y1="70" x2="445" y2="70" marker-end="url(#arrow)"/>
+  </g>
+</svg>

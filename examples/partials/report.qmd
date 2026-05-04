@@ -1,0 +1,63 @@
+---
+title: "Tetanus Surveillance — State of Arcadonia, 2015–2024"
+author: "Arcadonia Department of Public Health"
+date: today
+lang: en-US
+format:
+  html:
+    toc: true
+    axe:
+      output: document
+  typst:
+    fontsize: 10pt
+    margin:
+      top: 1in
+      bottom: 1.5in
+      x: 0.85in
+    pdf-standard: ua-1
+    template-partials:
+      - partials/typst-template.typ
+      - partials/page.typ
+      - partials/typst-show.typ
+format-links: 
+  - html
+  - format: typst
+    text: PDF
+    icon: file-pdf
+theme: [custom.scss, brand]
+---
+
+::: {.callout-note}
+## Simulated data
+
+All numbers, names, and findings are **simulated**. The State of
+Arcadonia does not exist.
+:::
+
+## Introduction
+
+Tetanus is caused by toxin from *Clostridium tetani* contaminating
+wounds. Disease is rare where childhood vaccination coverage is high,
+but adults with waning immunity — especially those aged ≥65 years —
+remain at risk. Reports and methodology notes are published by the
+[Arcadonia Department of Public Health](https://example.org/arcadonia-health).
+
+### Surveillance pipeline
+
+Confirmed cases reach the annual report through a short chain of
+passive reporting (@fig-pipeline): a clinician files a case report,
+the Department reviews and registers it, and counts are released each
+calendar year.
+
+![Surveillance pipeline: clinician reports flow to the Department of Public Health and into the annual surveillance report.](images/surveillance-pipeline.png){#fig-pipeline fig-alt="Diagram of the surveillance pipeline, showing how clinicians report cases to the Department of Public Health, which reviews and registers them before releasing counts in the annual surveillance report."}
+
+### Reportable conditions
+
+A handful of vaccine-preventable diseases are reportable in Arcadonia,
+each with a class and a maximum reporting window.
+
+| Condition  | Class | Reporting window |
+|------------|-------|------------------|
+| Tetanus    | B     | 7 days           |
+| Diphtheria | A     | 24 hours         |
+| Pertussis  | B     | 7 days           |
