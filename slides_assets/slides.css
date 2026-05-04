@@ -13,3 +13,66 @@
   white-space: nowrap;
   border: 0;
 }
+
+.reveal .headline-word {
+  font-family: var(--r-heading-font);
+  color: #7a2e2e;
+  font-size: 3em;
+}
+
+.reveal .smaller-text {
+  font-size: 0.8em;
+}
+
+.reveal .code-with-filename .code-with-filename-file {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding-left: 12px;
+}
+
+.reveal .code-with-filename .code-with-filename-file pre {
+  background-color: transparent;
+  padding-left: 0;
+}
+
+.reveal .code-with-filename pre.sourceCode code {
+  padding-left: 12px;
+}
+
+.reveal img.border {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.reveal .pipeline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5em 0.2em;
+  margin: 1em 0;
+}
+
+.reveal .pipeline-node {
+  display: inline-block;
+  padding: 0.3em 0.7em;
+  background-color: #f4f6f8;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.3em;
+}
+
+.reveal .pipeline-node + .pipeline-node::before {
+  content: "→";
+  display: inline-block;
+  margin-right: 0.6em;
+  margin-left: -0.3em;
+  color: #7a2e2e;
+  font-weight: 700;
+}
+
+.reveal .pipeline .fragment {
+  display: none;
+}
+
+.reveal .pipeline .fragment.visible {
+  display: inline-block;
+}
+
+

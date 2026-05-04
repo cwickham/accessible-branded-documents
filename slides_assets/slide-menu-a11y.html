@@ -1,16 +1,28 @@
 <script>
-  // Workaround for quarto-cli#14249 — the bundled reveal.js-menu plugin
-  // renders its open button as <a href="#"><i class="fas fa-bars"></i></a>
-  // with no accessible name, triggering an axe link-name violation.
-  // Upstream fix in flight at quarto-cli#14251; remove this once it ships.
+  // Workarounds for the bundled reveal.js-menu plugin:
+  //   1. Open button renders as <a href="#"><i class="fas fa-bars"></i></a>
+  //      with no accessible name (axe link-name; quarto-cli#14249, fix in flight at #14251).
+  //   2. Active menu panel is scrollable but has no tabindex, so keyboard
+  //      users can't arrow-scroll it (axe scrollable-region-focusable).
   (function () {
-    function patch() {
+    function patchButton() {
       var link = document.querySelector('.slide-menu-button > a[href="#"]');
-      if (link && !link.hasAttribute('aria-label')) {
+      if (!link) return false;
+      if (!link.hasAttribute('aria-label')) {
         link.setAttribute('aria-label', 'Toggle menu');
-        return true;
       }
-      return false;
+      return true;
+    }
+    function patchPanels() {
+      var panels = document.querySelectorAll('.slide-menu-panel');
+      if (panels.length === 0) return false;
+      panels.forEach(function (p) {
+        if (!p.hasAttribute('tabindex')) p.setAttribute('tabindex', '0');
+      });
+      return true;
+    }
+    function patch() {
+      return patchButton() && patchPanels();
     }
     if (patch()) return;
     new MutationObserver(function (_, obs) {
