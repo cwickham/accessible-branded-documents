@@ -12,7 +12,7 @@ format:
     template-partials:
       - slides_assets/title-slide.html
 author: Charlotte Wickham
-date: 2026-04-05
+date: 2026-05-05
 qr-url: https://cwickham.github.io/accessible-branded-documents
 qr-caption: Slides
 brand:
