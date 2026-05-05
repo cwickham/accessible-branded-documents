@@ -202,7 +202,7 @@ defaults:
 ```
 
 ::: footer
-https://posit-dev.github.io/brand-yml/
+<https://posit-dev.github.io/brand-yml/>
 :::
 
 ## Check accessibility: HTML
@@ -247,7 +247,7 @@ quarto install verapdf
 ```
 
 ::: footer
-https://quarto.org/docs/output-formats/typst.html#pdf-accessibility-standards
+<https://quarto.org/docs/output-formats/typst.html#pdf-accessibility-standards>
 :::
 
 ## Brand tweaks
