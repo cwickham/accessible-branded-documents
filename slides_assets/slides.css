@@ -16,7 +16,7 @@
 
 .reveal .headline-word {
   font-family: var(--r-heading-font);
-  color: #7a2e2e;
+  color: var(--quarto-scss-export-primary, #7a2e2e);
   font-size: 3em;
 }
 
@@ -51,6 +51,7 @@
 }
 
 .reveal .pipeline-node {
+  font-size: 0.8em;
   display: inline-block;
   padding: 0.3em 0.7em;
   background-color: #f4f6f8;
@@ -63,7 +64,7 @@
   display: inline-block;
   margin-right: 0.6em;
   margin-left: -0.3em;
-  color: #7a2e2e;
+  color: var(--quarto-scss-export-primary, #7a2e2e);
   font-weight: 700;
 }
 
@@ -75,4 +76,17 @@
   display: inline-block;
 }
 
+.reveal #title-slide .qrcode-caption {
+  margin: 0.3em 0 0 0;
+  font-size: 0.8em;
+  text-align: left;
+}
+
+.reveal #title-slide .columns > .column {
+  vertical-align: middle;
+}
+
+.reveal #title-slide h1.title {
+  font-size: 1.6em;
+}
 

@@ -104,7 +104,7 @@
     code span.vs { color: #008000; } /* VerbatimString */
     code span.wa { color: #696969; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="slides_files/libs/revealjs/dist/theme/quarto-6fad0649437d6609c37f412fa3a8f511.css">
+  <link rel="stylesheet" href="slides_files/libs/revealjs/dist/theme/quarto-4e37cccc438ad378360d5d72030a50bd.css">
   <link rel="stylesheet" href="slides_assets/slides.css">
   <link href="slides_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="slides_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -203,6 +203,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
+<div class="columns"><div class="column" style="width:70%;">
   <h1 class="title">Building Accessible,<br>On-Brand Documents<br>with Quarto</h1>
   <p class="subtitle">R/Medicine Demo</p>
 
@@ -215,6 +216,18 @@ Charlotte Wickham
 </div>
 
   <p class="date">2026-04-05</p>
+</div><div class="column" style="width:30%;">
+<div class="qrcode"></div>
+<script type="text/javascript">
+(function() {
+  var script = document.currentScript;
+  var qrcode = script.previousElementSibling;
+  qrcode.qrcode = new QRCode(qrcode, {"text":"https://cwickham.github.io/accessible-branded-documents","width":200,"height":200,"colorDark":"#000000","colorLight":"#ffffff"});
+  script.remove();
+})();
+</script>
+<p class="qrcode-caption">Slides</p>
+</div></div>
 </section>
 <section id="hello-im-charlotte-wickham" class="slide level2">
 <h2>Hello, I’m Charlotte Wickham</h2>
@@ -246,18 +259,24 @@ Charlotte Wickham
 <h2>Motivation</h2>
 <div class="columns">
 <div class="column" style="width:45%;">
-<p>Accessible<br> <span class="fragment headline-word" data-fragment-index="1">Respect</span></p>
-<div class="fragment smaller-text" data-fragment-index="2">
+<p>Accessible</p>
+<div class="fragment headline-word" data-fragment-index="4">
+<p>Reach</p>
+</div>
+<div class="fragment smaller-text" data-fragment-index="1">
 <p>Legal requirements: <a href="https://www.section508.gov">Section 508</a>, <a href="https://www.ada.gov/resources/2024-03-08-web-rule/">ADA Title II</a>, <a href="https://digital-strategy.ec.europa.eu/en/policies/web-accessibility">Web Accessibility Directive</a>, <a href="https://ec.europa.eu/social/main.jsp?catId=1202">European Accessibility Act</a></p>
 </div>
-<div class="fragment smaller-text" data-fragment-index="3">
+<div class="fragment smaller-text" data-fragment-index="2">
 <p>Technical standards: <a href="https://www.w3.org/TR/WCAG20/">WCAG 2.0 AA</a>, <a href="https://www.w3.org/TR/WCAG21/">WCAG 2.1 AA</a>, <a href="https://pdfa.org/resource/iso-14289-pdfua/">PDF UA-1</a></p>
 </div>
 </div><div class="column" style="width:10%;">
 
 </div><div class="column" style="width:45%;">
-<p>On-brand<br> <span class="fragment headline-word" data-fragment-index="4">Trust</span></p>
-<div class="fragment smaller-text" data-fragment-index="5">
+<p>On-brand</p>
+<div class="fragment headline-word" data-fragment-index="5">
+<p>Trust</p>
+</div>
+<div class="fragment smaller-text" data-fragment-index="3">
 <p>Fonts<br> Logos<br> Colors<br> Tone</p>
 </div>
 </div></div>
@@ -551,7 +570,7 @@ Charlotte Wickham
 <p>ggplot2</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co"># ggplot2 </span></span>
 <span id="cb15-2"><a href="" aria-hidden="true" tabindex="-1"></a>... <span class="sc">+</span></span>
-<span id="cb15-3"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(</span>
+<span id="cb15-3"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(             </span>
 <span id="cb15-4"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="at">base_size =</span> <span class="dv">12</span>,</span>
 <span id="cb15-5"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="at">base_family =</span> base_family,</span>
 <span id="cb15-6"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="at">ink =</span> ink,</span>
@@ -605,7 +624,7 @@ Charlotte Wickham
 </section>
 <section id="accessibility-is-a-shared-responsibility" class="slide level2">
 <h2>Accessibility is a shared responsibility</h2>
-<p>Imagine a reader reporting an issue with a table in your PDF when using VoiceOver in Adobe Acrobat Reader.</p>
+<p>A reader reports an issue with a table in your PDF when using VoiceOver in Adobe Acrobat Reader.</p>
 <p>The “fix” might live in:</p>
 <div class="pipeline">
 <p><span class="pipeline-node">Your code</span> <span class="pipeline-node fragment">gt</span> <span class="pipeline-node fragment">knitr</span> <span class="pipeline-node fragment">Quarto</span> <span class="pipeline-node fragment">Pandoc</span> <span class="pipeline-node fragment">Typst</span> <span class="pipeline-node fragment">Adobe Acrobat Reader</span> <span class="pipeline-node fragment">VoiceOver</span></p>
