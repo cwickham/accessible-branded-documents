@@ -108,20 +108,26 @@ for approximately two-thirds of reported cases.
 
 ```{r}
 #| label: tbl-demographics
-#| tbl-cap: "Reported tetanus cases and incidence rates by age group and by sex — State of Arcadonia, 2015–2024."
+#| tbl-cap: "Reported tetanus cases and incidence rates — State of Arcadonia, 2015–2024."
+#| tbl-subcap:
+#|   - "By age group"
+#|   - "By sex"
+#| layout-ncol: 2
 
-cases |>
+demographics <- cases |>
   pivot_longer(c(age_group, sex), names_to = "section",
                values_to = "level", values_transform = as.character) |>
   count(section, level, wt = cases, name = "n_cases") |>
   left_join(populations, by = "level") |>
-  mutate(
-    section = recode(section, age_group = "Age", sex = "Sex"),
-    rate_per_100k = round(n_cases / (population * 10) * 1e5, 2)
-  ) |>
-  select(section, level, population, n_cases, rate_per_100k) |>
-  gt(groupname_col = "section", rowname_col = "level") |>
+  mutate(rate_per_100k = round(n_cases / (population * 10) * 1e5, 2)) |>
+  select(section, level, population, n_cases, rate_per_100k)
+
+demographics |>
+  filter(section == "age_group") |>
+  select(-section) |>
+  gt() |>
   cols_label(
+    level = "Age group",
     population = "Population",
     n_cases = "Cases",
     rate_per_100k = "Rate"
@@ -129,11 +135,30 @@ cases |>
   tab_footnote(
     footnote = "per 100,000 person-years",
     locations = cells_column_labels(columns = rate_per_100k)
-  ) |> 
+  ) |>
   fmt_number(columns = population, decimals = 0, use_seps = TRUE) |>
   cols_align(align = "right", columns = -level) |>
-  theme_brand_gt() |> 
-  opt_table_font(base_family, weight = "regular", add = FALSE) 
+  theme_brand_gt() |>
+  opt_table_font(base_family, weight = "regular", add = FALSE)
+
+demographics |>
+  filter(section == "sex") |>
+  select(-section) |>
+  gt() |>
+  cols_label(
+    level = "Sex",
+    population = "Population",
+    n_cases = "Cases",
+    rate_per_100k = "Rate"
+  ) |>
+  tab_footnote(
+    footnote = "per 100,000 person-years",
+    locations = cells_column_labels(columns = rate_per_100k)
+  ) |>
+  fmt_number(columns = population, decimals = 0, use_seps = TRUE) |>
+  cols_align(align = "right", columns = -level) |>
+  theme_brand_gt() |>
+  opt_table_font(base_family, weight = "regular", add = FALSE)
 ```
 
 ## Background
