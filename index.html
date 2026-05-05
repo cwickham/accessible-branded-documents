@@ -500,20 +500,19 @@ Charlotte Wickham
 <div class="code-with-filename-file">
 <pre><strong>report.qmd</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10" data-filename="report.qmd"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb10-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="kw">{</span><span class="at">{&lt; include typst-style.md &gt;</span><span class="kw">}</span><span class="at">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10" data-filename="report.qmd"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb10-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="at">```{=typst}</span></span>
+<span id="cb10-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="kw">{</span><span class="at">{&lt; include typst-style.typ &gt;</span><span class="kw">}</span><span class="at">}</span></span>
+<span id="cb10-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="at">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><br></p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
-<pre><strong>typst-style.md</strong></pre>
+<pre><strong>typst-style.typ</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11" data-filename="typst-style.md"><pre class="sourceCode typst code-with-copy"><code class="sourceCode typst"><span id="cb11-1"><a href="" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ss">```{=typst}</span></span>
-<span id="cb11-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ss">#show link: set text(fill: brand-color.forest)  </span></span>
-<span id="cb11-4"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ss">#show ref: set text(fill: brand-color.forest)</span></span>
-<span id="cb11-5"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ss">#show ref: it =&gt; underline(it)   </span></span>
-<span id="cb11-6"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ss">#show heading: set block(above: 1.5em, below: 1em)  </span></span>
-<span id="cb11-7"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ss">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11" data-filename="typst-style.typ"><pre class="sourceCode typst code-with-copy"><code class="sourceCode typst"><span id="cb11-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="kw">#show</span> link<span class="op">:</span> <span class="kw">set</span> <span class="va">text</span><span class="op">(</span>fill<span class="op">:</span> brand-color<span class="op">.</span>forest<span class="op">)</span>  </span>
+<span id="cb11-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="kw">#show</span> ref<span class="op">:</span> <span class="kw">set</span> <span class="va">text</span><span class="op">(</span>fill<span class="op">:</span> brand-color<span class="op">.</span>forest<span class="op">)</span></span>
+<span id="cb11-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="kw">#show</span> ref<span class="op">:</span> it =&gt; underline(it)   </span>
+<span id="cb11-4"><a href="" aria-hidden="true" tabindex="-1"></a><span class="kw">#show</span> heading<span class="op">:</span> <span class="kw">set</span> <span class="va">block</span><span class="op">(</span>above<span class="op">:</span> <span class="fl">1.5em</span><span class="op">,</span> below<span class="op">:</span> <span class="fl">1em</span><span class="op">)</span>  </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="footer">
 <p>Code in repo: <code>examples/brand-tweaks/</code></p>
