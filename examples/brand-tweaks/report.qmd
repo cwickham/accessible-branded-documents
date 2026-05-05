@@ -20,7 +20,9 @@ format-links:
     icon: file-pdf
 ---
 
-{{< include typst-style.md >}}
+```{=typst}
+{{< include typst-style.typ >}}
+```
 
 ::: {.callout-note}
 ## Simulated data

@@ -301,11 +301,13 @@ Code in repo: `examples/brand-tweaks/`
 ## Brand tweaks: Typst rules
 
 ````{.yaml filename="report.qmd"}
-{{{< include typst-style.md >}}}
+```{=typst}
+{{{< include typst-style.typ >}}}
+```
 ````
 <br>
-````{.typst filename="typst-style.md"}
-{{< include examples/brand-tweaks/typst-style.md >}}
+````{.typst filename="typst-style.typ"}
+{{< include examples/brand-tweaks/typst-style.typ >}}
 ````
 
 ::: footer
