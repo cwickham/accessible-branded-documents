@@ -13,9 +13,9 @@ author: Charlotte Wickham
 date: 2026-04-05
 brand:
   color:
-    foreground: "#1a1a1a"
-    background: "#eceef0"
-    primary: "#7a2e2e"
+    foreground: "#0e1a2e"
+    background: "#ffffff"
+    primary: "#a04a2f"
   typography:
     fonts:
       - family: Atkinson Hyperlegible
@@ -26,8 +26,11 @@ brand:
       family: Atkinson Hyperlegible
     headings:
       family: Fraunces
+      color: primary
+    link:
+      color: "#1a3a6e"
     monospace-block:
-      background-color: "#f4f6f8"
+      background-color: "#f0f4fa"
 axe:
   output: document
 ---
@@ -361,7 +364,7 @@ ggplot2
 ```{.r}
 # ggplot2 
 ... +
-  theme_minimal(
+  theme_minimal(             
     base_size = 12,
     base_family = base_family,
     ink = ink,
