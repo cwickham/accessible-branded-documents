@@ -9,8 +9,12 @@ format:
       - slides_assets/slide-menu-a11y.html
       - slides_assets/viewport-a11y.html
     syntax-highlighting: a11y
+    template-partials:
+      - slides_assets/title-slide.html
 author: Charlotte Wickham
 date: 2026-04-05
+qr-url: https://cwickham.github.io/accessible-branded-documents
+qr-caption: Slides
 brand:
   color:
     foreground: "#0e1a2e"
@@ -63,14 +67,17 @@ Demo code: <https://github.com/cwickham/accessible-branded-documents>
 
 :::: {.columns}
 ::: {.column width="45%"}
-Accessible<br>
-[Respect]{.fragment .headline-word fragment-index=1}
+Accessible
 
-::: {.fragment .smaller-text fragment-index=2}
+::: {.fragment .headline-word fragment-index=4}
+Reach
+:::
+
+::: {.fragment .smaller-text fragment-index=1}
 Legal requirements: [Section 508](https://www.section508.gov), [ADA Title II](https://www.ada.gov/resources/2024-03-08-web-rule/), [Web Accessibility Directive](https://digital-strategy.ec.europa.eu/en/policies/web-accessibility), [European Accessibility Act](https://ec.europa.eu/social/main.jsp?catId=1202)
 :::
 
-::: {.fragment .smaller-text fragment-index=3}
+::: {.fragment .smaller-text fragment-index=2}
 Technical standards: [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/), [WCAG 2.1 AA](https://www.w3.org/TR/WCAG21/), [PDF UA-1](https://pdfa.org/resource/iso-14289-pdfua/)
 :::
 :::
@@ -79,10 +86,13 @@ Technical standards: [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/), [WCAG 2.1 AA]
 :::
 
 ::: {.column width="45%"}
-On-brand<br>
-[Trust]{.fragment .headline-word fragment-index=4}
+On-brand
 
-::: {.fragment .smaller-text fragment-index=5}
+::: {.fragment .headline-word fragment-index=5}
+Trust
+:::
+
+::: {.fragment .smaller-text fragment-index=3}
 Fonts<br>
 Logos<br>
 Colors<br>
@@ -422,7 +432,7 @@ Accessibility checks will catch some problems:
 
 ## Accessibility is a shared responsibility
 
-Imagine a reader reporting an issue with a table in your PDF when using VoiceOver in Adobe Acrobat Reader.
+A reader reports an issue with a table in your PDF when using VoiceOver in Adobe Acrobat Reader.
 
 The "fix" might live in:
 
